@@ -25,3 +25,55 @@
 #container a {
   text-decoration: none;
 }
+
+.search {
+  ion-searchbar {
+    padding: 10px;
+  }
+  ion-button {
+    padding: 5px;
+  }
+}
+
+.selector {
+  padding:10px;
+  padding-right: 13px;
+}
+.select-btn {
+  padding: 5px;
+}
+
+.slide {
+  height: 30vh;
+  background-position: center;
+  background-size: cover;
+  color: white;
+  background-color: rgba(0,0,0,0.5);
+  background-blend-mode: multiply;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-features {
+  margin-top: 10px;
+  padding: 5px;
+}
+
+.feature-slide {
+  height: 20vh;
+  background-position: center;
+  background-size: cover;
+  color: white;
+  background-color: rgba(0,0,0,0.5);
+  background-blend-mode: multiply;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
+}
+
+.card-btn {
+  padding-top: 5px;
+}

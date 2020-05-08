@@ -1,20 +1,68 @@
-<ion-header [translucent]="true">
+<ion-header mode='ios' translucent="true">
   <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+    <ion-title>Home</ion-title>
   </ion-toolbar>
 </ion-header>
-
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
+  <ion-header mode='ios' collapse="condense" class="ion-no-border">              
     <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+      <ion-title size="large">Home</ion-title>
+    </ion-toolbar>
+    <ion-toolbar class="search">
+      <ion-searchbar></ion-searchbar>
+      <ion-button slot="end">
+        <ion-icon name="filter-outline"></ion-icon>
+      </ion-button>
+    </ion-toolbar>
+    <ion-toolbar>
+      <ion-select value="current" class="selector" interface="popover">
+        <ion-select-option value="current">Current Location</ion-select-option>
+        <ion-select-option value="home">Home</ion-select-option>
+        <ion-select-option value="work">Work</ion-select-option>
+      </ion-select>
+      <ion-button slot="end" class="select-btn">
+        <ion-icon name="add-outline"></ion-icon>
+      </ion-button>
     </ion-toolbar>
   </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+  <ion-slides pager="true" [options]="slideOpts">
+    <ion-slide class="slide" style="background-image: url('../../assets/grocery.jpg');">
+      <h1>Groceries</h1>
+      <p>Lorem Ipsum Dolor whatevev blah blah blah</p>
+    </ion-slide>
+    <ion-slide class="slide" style="background-image: url('../../assets/medicines.jpg')">
+      <h1>Medicines</h1>
+      <p>Lorem Ipsum Dolor whatevev blah blah blah</p>
+    </ion-slide>
+    <ion-slide class="slide" style="background-image: url('../../assets/cleanings.jpg')">
+      <h1>Cleaning items</h1>
+      <p>Lorem Ipsum Dolor whatevev</p>
+    </ion-slide>
+  </ion-slides>
+  <div class="tiles">
+    <ion-card mode="ios">
+      <img src="../../assets/grocery.jpg" />
+      <ion-card-header>
+        <ion-card-subtitle>Buy Groceries</ion-card-subtitle>
+        <ion-card-title>Groceries</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <h4>Featured Items: </h4>
+        <ion-slides [options]="featureOpts" class="card-features">
+          <ion-slide class="feature-slide" style="background-image: url('../../assets/bread.jpg');">
+            <h5>Breads</h5>
+          </ion-slide>
+          <ion-slide class="feature-slide" style="background-image: url('../../assets/veg.jpg');">
+            <h5>Vegetables</h5>
+          </ion-slide>
+          <ion-slide class="feature-slide" style="background-image: url('../../assets/veg.jpg');">
+            <h5>Vegetables</h5>
+          </ion-slide>
+        </ion-slides>
+        <ion-button class="card-btn">
+          See More >
+        </ion-button>
+      </ion-card-content>
+    </ion-card>
   </div>
 </ion-content>
